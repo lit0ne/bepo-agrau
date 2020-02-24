@@ -1,0 +1,32 @@
+! Change control touch
+! Ctrl touch
+clear control
+clear shift
+!clear escape
+!clear mod1
+!clear mod2
+!clear mod3
+! Windows :
+!clear mod4
+clear mod5
+!keycode 100 = Control_R
+keycode 135 = ISO_Level3_Shift 
+keycode 100 = Shift_L
+!keycode 133 = Alt_L
+!keycode 50 = Escape
+keycode 14 = Escape
+keycode 62 = Insert
+keycode 9 = 
+! 
+keycode 102 = Control_L
+keycode 172 = 
+keycode 37 = 
+!keycode 37 = Hyper_L
+!keycode 172 = ecircumflex
+!remove shift = Shift_L
+!remove Control = Control_L
+add control = Control_R Control_L
+add mod5 = ISO_Level3_Shift
+!add mod4 = Super_R Super_L
+!add mod3 = Super_R Super_L
+!add mod1 = Super_R Super_L

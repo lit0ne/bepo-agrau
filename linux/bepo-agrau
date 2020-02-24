@@ -1,0 +1,139 @@
+// xkb configuration file
+//
+// Install on Debian :
+// $ ln -s ./bepo-agrau /usr/share/X11/xkb/symbols/
+// $ cp ./bepo-agrau /usr/share/X11/xkb/symbols/
+// $ xset r rate 150 50
+//
+// ┌─────┐
+// │ S A │   S = Shift,  A = AltGr + Shift
+// │ s a │   s = normal, a = AltGr
+// └─────┘
+//
+// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
+// │ # ¶ │ 1 „ │ 2 “ │ 3 ” │ 4 ≤ │ 5 ≥ │ 6   │ 7 ¬ │ 8 ¼ │ 9 ½ │ 0 ¾ │ ° ′ │ ` ″ ┃ ⌫ Retour┃
+// │ $ – │ " — │ « < │ » > │ ( [ │ ) ] │ @ ^ │ + ± │ - − │ / ÷ │ * × │ = ≠ │ % ‰ ┃  arrière┃
+// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
+// ┃       ┃ B ¦ │ É ˝ │ P § │ O Œ │ È ` │ !   │ V   │ D Ð │ L   │ J Ĳ │ Z Ə │ W   ┃Entrée ┃
+// ┃Tab ↹  ┃ b | │ é ˊ │ p & │ o œ │ è ` │ ˆ ¡ │ v ˇ │ d ð │ l / │ j ĳ │ z ə │ w ̆  ┃   ⏎   ┃
+// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
+// ┃        ┃ A Æ │ U Ù │ I ˙ │ E ¤ │ ; ̛  │ C ſ │ T Þ │ S ẞ │ R ™ │ N   │ M º │ Ç , ┃      ┃
+// ┃Maj ⇬   ┃ a æ │ u ù │ i ̈  │ e € │ , ’ │ c © │ t þ │ s ß │ r ® │ n ˜ │ m ¯ │ ç ¸ ┃      ┃
+// ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
+// ┃       ┃ Ê   │ À   │ Y ‘ │ X ’ │ : · │ K   │ ? ̉  │ Q ̣  │ G   │ H ‡ │ F ª ┃             ┃
+// ┃Shift ⇧┃ ê / │ à \ │ y { │ x } │ . … │ k ~ │ ' ¿ │ q ˚ │ g µ │ h † │ f ˛ ┃Shift ⇧      ┃
+// ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
+// ┃       ┃       ┃       ┃ Espace inséc.   Espace inséc. fin ┃       ┃       ┃       ┃
+// ┃Ctrl   ┃Meta   ┃Alt    ┃ ␣ (Espace)      _               ␣ ┃AltGr ⇮┃Menu   ┃Ctrl   ┃
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┛
+//
+// ╭─────╮ ╭─────┬─────┬─────┬─────┬─────╮ ╭─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────╮
+// │     │ │ „ “ │ ` ” │     │ @   │ €   │ │ Ù Æ │ ←   │ →   │     │     │     │     │     │
+// │Esc  │ │ % « │ : » │ Esc │ = ^ │ $ ¤ │ │ ù æ │ + 8 │ - 9 │ /   │ *   │ °   │     │     │
+// ╰─────╯ ├─────┼─────┼─────┼─────┼─────┤ ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//         │ B   │ É   │ P   │ O   │ È   │ │ W Œ │ V   │ D   │ L   │ J   │ Z   │¨    │     │
+//  ╭─────╮│ b < │ é > │ p { │ o } │ è ` │ │ w œ │ v 4 │ d 5 │ l 6 │ j 7 │ z   │ ˆ   │     │
+//  │     │├─────┼─────┼─────┼─────┼─────┤ ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────╯
+//  │     ││ A   │ U   │ I   │ E   │ ;   │ │ C   │ T   │ S   │ R   │ N   │ M   │     │
+//  │Shift││ a [ │ u ] │ i ( │ e ) │ , # │ │ c " │ t 0 │ s 1 │ r 2 │ n 3 │ m   │     │
+//  │     │├─────┼─────┼─────┼─────┼─────┤ ├─────┼─────┼─────┼─────┼─────┼─────┤Shift│
+//  │     ││ À   │ Y   │ X   │ !   │ K   │ │ ? ‘ │ Q   │ G   │ H   │ F   │ Ç   │     │ ╭─────╮
+//  ╰─────╯│ à \ │ y | │ x & │ . … │ k ~ │ │ ’ ' │ q   │ g   │ h   │ f   │ ç   │     │ │     │
+//  ╭─────╮├─────┼─────┴─────┴─────┴─────╯ ╰─────┴─────┴─────┴─────┴─────┴─────┴─────╯ │     │
+//  │     ││ Ê   │╭─────┬─────┬─────────────────────────┬─────╮                        │     │
+//  │Ctrl ││ ê   ││     │     │insec          insec fin │     │                        │     │
+//  ╰─────╯╰─────╯│Ctrl │Mod4 │espace                _  │Ctrl │                        │     │
+//    ┏━━━━━━━┳━━━┷━━━┳━┷━━━━━╈─────────────────────────┼─────┤                        ╰─────╯
+//    ┃       ┃       ┃       ┃                         │     │
+//    ┃Fn     ┃Start  ┃AltGr  ┃                         │AltGr│
+//    ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹                         ╰─────╯
+//
+// ╔════╦════╦════╦════╦════╦════╦════╦════╦════╦════╦════╦════╦════╦════╦════╗
+// ║    ║ F1 ║ F2 ║ F3 ║ F4 ║ F5 ║del ║ F6 ║ F7 ║ F8 ║ F9 ║ F10║ F11║ F12║num.║
+// ╚════╩════╩════╩════╩════╩════╣ ins╠════╩════╩════╩════╩════╩════╩════╬════╣
+// │    │[  ]│{  }│<  >│(  )│esc ╠════╣    │    │    │    │ 0  │    │    ║    ║
+// │    │    │    │    │    │    ║ ⌫  ║ ç  │ +  │ -  │ /  │ *  │    │    ║    ║
+// ╔════╗────┼────┼────┼────┼────║    ║────┼────┼────┼────┼────┼────┼────╠════╣
+// ║ ↹  ║ b |│ é &│ p =│ o "│ è `║    ║ w  │ v 7│ d 8│ l 9│ j  │ Z  │    ║    ║
+// ║    ║ B  │ É  │ P ~│ O  │ È  ║    ║ W  │ V  │ D  │ L  │ J  │ z  │    ║    ║
+// ╠════╣────┼────┼────┼────┼────╠════╣────┼────┼────┼────┼────┼────╔════╬════╣
+// ║shft║ a ^│ u %│ i #│ e $│ , !║ ⏎  ║ c  │ t 4│ s 5│ n 6│ r .│ m  ║ ⇧  ║    ║
+// ║    ║ A @│ U  │ I ¨│ E €│    ║    ║ C  │ T  │ S  │ N  │ R  │ M  ║    ║    ║
+// ║    ║─══─┼─══─┼─══─┼─══─┼────║    ║────┼─══─┼─══─┼─══─┼─══─┼────║    ╠════╣
+// ║    ║ à \│ y /│ x ;│ . :│ k ?║    ║ ' 0│ q 1│ g 2│ h 3│ f  │    ║    ║    ║
+// ║    ║ À  │ Y  │ X  │    │ K  ║    ║    │ Q  │ G  │ H  │ F  │    ║    ║    ║
+// ╠════╬════╦════╦════╦════╧════╩════╩════╧════╦════╦════╦════╦════╬════╬════╣
+// ║    ║    ║alt ║ctrl║                -       ║shft║ ⇱  ║ ⇑  ║ ⇲  ║    ║ ⇞  ║
+// ║    ║    ║ gr ║    ║                        ║    ║    ║    ║    ║    ║    ║
+// ╠════╬════╩═╦══╩════╣ Espace         _       ╠════╬════╬════╬════╣    ╠════╣
+// ║fn  ║start ║alt    ╠════════════════════════╣alt ║ ⇐  ║ ⇓  ║ ⇒  ║    ║ ⇟  ║
+// ║    ║      ║       ║                        ║ gr ║   0║    ║   .║    ║    ║
+// ╚════╩══════╩═══════╝                        ╚════╩════╩════╩════╩════╩════╝
+
+partial alphanumeric_keys
+xkb_symbols "bepo" {
+
+    include "level3(ralt_switch)"
+    include "keypad(oss)"
+
+    name[Group1]= "French (Bepo, ergonomic, Dvorak way)";
+
+    // First row
+    key <TLDE> { [                                                  voidsymbol,   voidsymbol,      voidsymbol,     voidsymbol ] }; //
+    key <AE01> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [     bracketleft,   voidsymbol,    bracketright,     voidsymbol ] }; // [ ]
+    key <AE02> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [       braceleft,   voidsymbol,      braceright,     voidsymbol ] }; // { }
+    key <AE03> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [            less,   voidsymbol,         greater,     voidsymbol ] }; // < >
+    key <AE04> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [       parenleft,   voidsymbol,      parenright,     voidsymbol ] }; // ( )
+    key <AE05> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [      voidsymbol,   voidsymbol,      voidsymbol,     voidsymbol ] }; //
+    key <AE06> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [        ccedilla,     Ccedilla,     asciicircum,     voidsymbol ] }; // ç Ç ^
+    key <AE07> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [            plus,   voidsymbol,               7,     voidsymbol ] }; // + 7
+    key <AE08> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [           minus,   voidsymbol,               8,     voidsymbol ] }; // - 8
+    key <AE09> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [           slash,   voidsymbol,               9,     voidsymbol ] }; // / 9
+    key <AE10> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [        asterisk,            0,      voidsymbol,     voidsymbol ] }; // * 0
+    key <AE11> { [                                                  voidsymbol,   voidsymbol,      voidsymbol,     voidsymbol ] }; //
+    key <AE12> { [                                                  voidsymbol,   voidsymbol,      voidsymbol,     voidsymbol ] }; //
+
+    // Second row
+    key <AD01> { [                                                            b,           B,             bar,      brokenbar ] }; // b B | ¦
+    key <AD02> { [                                                       eacute,      Eacute,       ampersand,     voidsymbol ] }; // é É &
+    key <AD03> { [                                                            p,           P,           equal,     asciitilde ] }; // p P = ~
+    key <AD04> { [                                                            o,           O,        quotedbl,     voidsymbol ] }; // o O "
+    key <AD05> { [                                                       egrave,      Egrave,      dead_grave,          grave ] }; // è È ` `
+    key <AD06> { [                                                            w,           W,      voidsymbol,     voidsymbol ] }; // w W 
+    key <AD07> { [                                                            v,           V,               7,     voidsymbol ] }; // v V 7
+    key <AD08> { [                                                            d,           D,               8,     voidsymbol ] }; // d D 8
+    key <AD09> { [                                                            l,           L,               9,     voidsymbol ] }; // l L 9
+    key <AD10> { [                                                            j,           J,      voidsymbol,     voidsymbol ] }; // j J
+    key <AD11> { [                                                            z,           Z,      voidsymbol,     voidsymbol ] }; // z Z
+    key <AD12> { [                                                   voidsymbol,  voidsymbol,      voidsymbol,     voidsymbol ] }; //
+
+    // Third row
+    key <AC01> { [                                                            a,           A, dead_circumflex,            at  ] }; // a A ^ @
+    key <AC02> { [                                                            u,           U,         percent,     voidsymbol ] }; // u U %
+    key <AC03> { [                                                            i,           I,      numbersign, dead_diaeresis ] }; // i I # ¨
+    key <AC04> { [                                                            e,           E,          dollar,       EuroSign ] }; // e E $ €
+    key <AC05> { [                                                        comma,  voidsymbol,          exclam,     voidsymbol ] }; // , !
+    key <AC06> { [                                                            c,           C,      voidsymbol,     voidsymbol ] }; // c C
+    key <AC07> { [                                                            t,           T,               4,     voidsymbol ] }; // t T 4 
+    key <AC08> { [                                                            s,           S,               5,     voidsymbol ] }; // s S 5
+    key <AC09> { [                                                            r,           R,               6,     voidsymbol ] }; // r R 6
+    key <AC10> { [                                                            n,           N,          period,     dead_tilde ] }; // n N . ~
+    key <AC11> { [                                                            m,           M,      voidsymbol,     voidsymbol ] }; // m M
+    key <BKSL> { [                                                   voidsymbol,  voidsymbol,      voidsymbol,     voidsymbol ] }; // 
+
+    // Fourth row
+    key <LSGT> { [                                                   voidsymbol,  voidsymbol,      voidsymbol,     voidsymbol ] }; //
+    key <AB01> { [                                                       agrave,      Agrave,       backslash,     voidsymbol ] }; // à À \
+    key <AB02> { [                                                            y,           Y,           slash,     voidsymbol ] }; // y Y / 
+    key <AB03> { [                                                            x,           X,       semicolon,     voidsymbol ] }; // x X ;
+    key <AB04> { [                                                       period,       colon,           colon,     voidsymbol ] }; // . : :
+    key <AB05> { [                                                            k,           K,        question,     voidsymbol ] }; // k K ~
+    key <AB06> { [                                                   apostrophe,  voidsymbol,               0,     voidsymbol ] }; // '   0
+    key <AB07> { [                                                            q,           Q,               1,     voidsymbol ] }; // q Q 1
+    key <AB08> { [                                                            g,           G,               2,     voidsymbol ] }; // g G 2
+    key <AB09> { [                                                            h,           H,               3,     voidsymbol ] }; // h H 3
+    key <AB10> { [                                                            f,           F,      voidsymbol,     voidsymbol ] }; // f F
+
+    // SPACE
+    key <SPCE> { [                                                        space,  voidsymbol,     underscore,     voidsymbol ] }; // ␣ _
+};
